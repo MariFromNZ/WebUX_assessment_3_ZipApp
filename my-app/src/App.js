@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+import React from 'react';
+import Footer from './components/footer';
+
 function App() {
   return (
     <div className="App">
@@ -19,6 +22,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   );
 }
