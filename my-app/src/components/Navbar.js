@@ -13,10 +13,10 @@ function Navbar() {
         <header>
             <h3>Logo</h3>
             <nav ref={navRef}>
-                <a href="/#">Home</a>
-                <a href="/#">Community</a>
-                <a href="/#">Upload</a>
-                <a href="/#">Profile</a>
+                <a href="/">Home</a>
+                <a href="/community">Community</a>
+                <a href="/draft-upload">Upload</a>
+                <a href="/profile">Profile</a>
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                     <FaTimes/>
                 </button>
