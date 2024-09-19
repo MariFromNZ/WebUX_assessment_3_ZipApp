@@ -1,7 +1,8 @@
-.App {
+/*(Mariia) commented as dont need this style for whole app */
+/*.App {
   text-align: center;
-}
-
+} */
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +36,22 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+
+
+/* (Mariia) style for footer */
+.footer {
+  background-color: #363636;
+}
+.footer_content {
+  margin: 0 20px;
+  padding: 20px 0;
+}
+.footer p,a {
+  color: #ffffff;
+}
+.footer_content_address {
+  margin: 44px 0;
 }
