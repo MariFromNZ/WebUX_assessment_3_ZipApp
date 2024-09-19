@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
 import profileIcon from '../images/profileIcon.svg';
+import locationIcon from '../images/locationIcon.svg';
 import { Container, Row, Col } from 'react-bootstrap';
 
 
@@ -21,7 +22,11 @@ function ProfilePage() {
               </Col>
               <Col xs={6} className='profile_content_details_name'>
                <h2>Name</h2>
+               <div className='d-flex align-items-center'>
+                <img src={locationIcon} alt='location icon' className='profile_location_icon'/>
                 <p >location</p>
+               </div>
+
                 <p>5 followers</p>
                 <p>13 following</p>
              </Col>
