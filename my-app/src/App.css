@@ -55,3 +55,29 @@
 .footer_content_address {
   margin: 44px 0;
 }
+
+/*(Mariia) style for profile page*/
+.title{
+  background-color: #363636;
+}
+.title h1 {
+  color: #ffffff;
+  padding: 20px;
+}
+
+.profile_content_details_avatar{
+  /* width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  border: #363636 2px solid;
+  object-fit:cover;
+  overflow: hidden; */
+
+  background-color: #363636;
+}
+
+/* for bootstrap */
+.profile_content {
+  margin: 20px;
+}
+
