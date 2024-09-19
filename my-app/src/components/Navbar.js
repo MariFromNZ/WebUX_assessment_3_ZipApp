@@ -1,6 +1,7 @@
 import {useRef} from "react";
 import {FaBars, FaTimes} from "react-icons/fa";
 import "./navStyle.css"
+import zipLogoSmall from "../images/zipLogoSmall.svg"
 
 function Navbar() {
     const navRef = useRef();
@@ -11,7 +12,7 @@ function Navbar() {
 
     return (
         <header>
-            <h3>Logo</h3>
+            <img src={zipLogoSmall} alt="small zip logo"/>
             <nav ref={navRef}>
                 <a href="/#">Home</a>
                 <a href="/#">Community</a>
