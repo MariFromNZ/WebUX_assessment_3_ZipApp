@@ -75,9 +75,19 @@
 
   background-color: #363636;
 }
-
-/* for bootstrap */
+.profile_content_details_name p {
+  margin-bottom: 0;
+}
+.profile_content_details {
+  margin-bottom: 40px;
+}
 .profile_content {
   margin: 20px;
+}
+.profile_content h4{
+  margin-bottom: 1.8rem;
+}
+.row-margin-bottom {
+  margin-bottom: 45px;
 }
 
