@@ -2,8 +2,9 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
 import profileIcon from '../images/profileIcon.svg';
-import locationIcon from '../images/locationIcon.svg';
+// import locationIcon from '../images/locationIcon.svg';
 import { Container, Row, Col } from 'react-bootstrap';
+import { FaLocationDot } from "react-icons/fa6";
 
 
 function ProfilePage() {
@@ -14,17 +15,18 @@ function ProfilePage() {
         <div className='title'>
           <h1>Profile</h1>
         </div>
-        <div className='profile_content'>
+        <div className='profile_content' id='bootsrtap-overrides'>
           <Container>
             <Row className='profile_content_details'>
               <Col xs={6} className='profile_content_details_avatar d-flex justify-content-center align-items-center'>
                 <img  src={profileIcon} alt="user avatar"/>
               </Col>
               <Col xs={6} className='profile_content_details_name'>
-               <h2>Name</h2>
+               <h2>Olivia</h2>
                <div className='d-flex align-items-center'>
-                <img src={locationIcon} alt='location icon' className='profile_location_icon'/>
-                <p >location</p>
+                {/* <img src={locationIcon} alt='location icon' className='profile_location_icon'/> */}
+                <FaLocationDot />
+                <p >Ackland New Zealand</p>
                </div>
 
                 <p>5 followers</p>
