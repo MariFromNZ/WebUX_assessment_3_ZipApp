@@ -4,6 +4,7 @@ import Footer from '../components/footer'
 import profileIcon from '../images/pukeko.jpg';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaLocationDot } from "react-icons/fa6";
+import './ProfilePageStyle.css';
 
 
 function ProfilePage() {

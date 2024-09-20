@@ -57,7 +57,7 @@
 }
 
 /*(Mariia) style for profile page*/
-.title{
+/* .title{
   background-color: #363636;
 }
 .title h1 {
@@ -83,7 +83,7 @@
 }
 .row-margin-bottom {
   margin-bottom: 45px;
-}
+} */
 
 /*(Mariia) override bootsrtap rules*/
 #bootstrap-overrides .container{

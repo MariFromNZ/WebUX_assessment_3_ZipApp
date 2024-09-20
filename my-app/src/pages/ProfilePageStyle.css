@@ -1,0 +1,28 @@
+/*(Mariia) style for profile page*/
+.title{
+    background-color: #363636;
+  }
+  .title h1 {
+    color: #ffffff;
+    padding: 20px;
+  }
+  .profile_content_details_avatar img{
+    width: 135px;
+    height: 135px;
+    object-fit: cover;
+  }
+  .profile_content_details_name p {
+    margin-bottom: 0;
+  }
+  .profile_content_details {
+    margin-bottom: 40px;
+  }
+  .profile_content {
+    margin: 20px;
+  }
+  .profile_content h4{
+    margin-bottom: 1.8rem;
+  }
+  .row-margin-bottom {
+    margin-bottom: 45px;
+  }
