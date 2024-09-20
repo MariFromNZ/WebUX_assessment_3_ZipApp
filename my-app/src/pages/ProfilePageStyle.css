@@ -26,3 +26,29 @@
   .row-margin-bottom {
     margin-bottom: 45px;
   }
+
+ /* .card-transparent-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);
+ } */
+ .card-position {
+    position: relative;
+ }
+ /* .card-title-overlay {
+    position:absolute;
+ } */
+ .card-body {
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    bottom: 0px;
+    width: 100%;
+ }
+ .card-title {
+    color: #ffffff;
+    margin: 0;
+ }
+ .card {
+    border: none;
+ }

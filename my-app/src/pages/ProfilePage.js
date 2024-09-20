@@ -5,6 +5,7 @@ import profileIcon from '../images/pukeko.jpg';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaLocationDot } from "react-icons/fa6";
 import './ProfilePageStyle.css';
+import Card from 'react-bootstrap/Card';
 
 
 function ProfilePage() {
@@ -57,9 +58,19 @@ function ProfilePage() {
 
            <Row className='profile_content_saved row-margin-bottom'>
               <h4>My saved posts</h4>
+
               <Col xs={6}>
-                <h6>post 1</h6>
+                <Card className='card-position'>
+                  <Card.Img variant="top" src={profileIcon} alt="user avatar" />
+                  <Card.Body>
+                    <Card.Title className='card-transparent-bg card-title-overlay'>Pukeko</Card.Title>
+                    {/* <Card.Text>
+                      Some quick example
+                     </Card.Text> */}
+                  </Card.Body>
+                </Card>
               </Col>
+
               <Col xs={6}>
                 <h6>post 2</h6>
               </Col>
