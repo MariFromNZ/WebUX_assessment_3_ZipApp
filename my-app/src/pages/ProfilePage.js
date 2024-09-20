@@ -2,6 +2,8 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
 import profileIcon from '../images/pukeko.jpg';
+import bookmarkIcon from '../images/bookmarkIcon.svg';
+import shareIcon from '../images/shareIcon.svg';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaLocationDot } from "react-icons/fa6";
 import './ProfilePageStyle.css';
@@ -43,16 +45,55 @@ function ProfilePage() {
            <Row className='profile_content_recent row-margin-bottom'>
               <h4>My recent posts</h4>
               <Col xs={6}>
-                <h6>post 1</h6>
+                <Card className='card-position'>
+                  <Card.Img variant="top" src={profileIcon} alt="user avatar" />
+                  <Card.Body className='d-flex justify-content-between align-items-center'>
+                    <Card.Title className='card-transparent-bg card-title-overlay'>Pukeko</Card.Title>
+                    <div className='card_icons d-flex'>
+                      <img  src={bookmarkIcon} alt="bookmark" className='bookmark icon'/>
+                      <img  src={shareIcon} alt="share" className='share icon'/>
+                    </div>
+                  </Card.Body>
+                </Card>
               </Col>
+
               <Col xs={6}>
-                <h6>post 2</h6>
+                <Card className='card-position'>
+                  <Card.Img variant="top" src={profileIcon} alt="user avatar" />
+                  <Card.Body className='d-flex justify-content-between align-items-center'>
+                    <Card.Title className='card-transparent-bg card-title-overlay'>Pukeko</Card.Title>
+                    <div className='card_icons d-flex'>
+                      <img  src={bookmarkIcon} alt="bookmark" className='bookmark icon'/>
+                      <img  src={shareIcon} alt="share" className='share icon'/>
+                    </div>
+                  </Card.Body>
+                </Card>
               </Col>
+
               <Col xs={6}>
-                <h6>post 3</h6>
+                <Card className='card-position'>
+                  <Card.Img variant="top" src={profileIcon} alt="user avatar" />
+                  <Card.Body className='d-flex justify-content-between align-items-center'>
+                    <Card.Title className='card-transparent-bg card-title-overlay'>Pukeko</Card.Title>
+                    <div className='card_icons d-flex'>
+                      <img  src={bookmarkIcon} alt="bookmark" className='bookmark icon'/>
+                      <img  src={shareIcon} alt="share" className='share icon'/>
+                    </div>
+                  </Card.Body>
+                </Card>
               </Col>
+
               <Col xs={6}>
-                <h6>post 4</h6>
+                <Card className='card-position'>
+                  <Card.Img variant="top" src={profileIcon} alt="user avatar" />
+                  <Card.Body className='d-flex justify-content-between align-items-center'>
+                    <Card.Title className='card-transparent-bg card-title-overlay'>Pukeko</Card.Title>
+                    <div className='card_icons d-flex'>
+                      <img  src={bookmarkIcon} alt="bookmark" className='bookmark icon'/>
+                      <img  src={shareIcon} alt="share" className='share icon'/>
+                    </div>
+                  </Card.Body>
+                </Card>
               </Col>
            </Row>
 
@@ -62,23 +103,53 @@ function ProfilePage() {
               <Col xs={6}>
                 <Card className='card-position'>
                   <Card.Img variant="top" src={profileIcon} alt="user avatar" />
-                  <Card.Body>
+                  <Card.Body className='d-flex justify-content-between align-items-center'>
                     <Card.Title className='card-transparent-bg card-title-overlay'>Pukeko</Card.Title>
-                    {/* <Card.Text>
-                      Some quick example
-                     </Card.Text> */}
+                    <div className='card_icons d-flex'>
+                      <img  src={bookmarkIcon} alt="bookmark" className='bookmark icon'/>
+                      <img  src={shareIcon} alt="share" className='share icon'/>
+                    </div>
                   </Card.Body>
                 </Card>
               </Col>
 
               <Col xs={6}>
-                <h6>post 2</h6>
+                <Card className='card-position'>
+                  <Card.Img variant="top" src={profileIcon} alt="user avatar" />
+                  <Card.Body className='d-flex justify-content-between align-items-center'>
+                    <Card.Title className='card-transparent-bg card-title-overlay'>Pukeko</Card.Title>
+                    <div className='card_icons d-flex'>
+                      <img  src={bookmarkIcon} alt="bookmark" className='bookmark icon'/>
+                      <img  src={shareIcon} alt="share" className='share icon'/>
+                    </div>
+                  </Card.Body>
+                </Card>
               </Col>
+
               <Col xs={6}>
-                <h6>post 3</h6>
+                <Card className='card-position'>
+                  <Card.Img variant="top" src={profileIcon} alt="user avatar" />
+                  <Card.Body className='d-flex justify-content-between align-items-center'>
+                    <Card.Title className='card-transparent-bg card-title-overlay'>Pukeko</Card.Title>
+                    <div className='card_icons d-flex'>
+                      <img  src={bookmarkIcon} alt="bookmark" className='bookmark icon'/>
+                      <img  src={shareIcon} alt="share" className='share icon'/>
+                    </div>
+                  </Card.Body>
+                </Card>
               </Col>
+
               <Col xs={6}>
-                <h6>post 4</h6>
+                <Card className='card-position'>
+                  <Card.Img variant="top" src={profileIcon} alt="user avatar" />
+                  <Card.Body className='d-flex justify-content-between align-items-center'>
+                    <Card.Title className='card-transparent-bg card-title-overlay'>Pukeko</Card.Title>
+                    <div className='card_icons d-flex'>
+                      <img  src={bookmarkIcon} alt="bookmark" className='bookmark icon'/>
+                      <img  src={shareIcon} alt="share" className='share icon'/>
+                    </div>
+                  </Card.Body>
+                </Card>
               </Col>
            </Row>
           </Container>

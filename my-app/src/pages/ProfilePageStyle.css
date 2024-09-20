@@ -49,6 +49,12 @@
     color: #ffffff;
     margin: 0;
  }
+ .card_icons img{
+    width:1rem;
+    height:1rem;
+    margin-left: 10px;
+ }
  .card {
     border: none;
+    margin-bottom: 20px;
  }
