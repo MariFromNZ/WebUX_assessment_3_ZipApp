@@ -1,4 +1,6 @@
 /*(Mariia) commented as dont need this style for whole app */
+
+
 /*.App {
   text-align: center;
 } */
@@ -41,17 +43,11 @@
 
 
 
-/* (Mariia) style for footer */
-.footer {
-  background-color: #363636;
+
+
+
+/*(Mariia) override bootsrtap rules*/
+#bootstrap-overrides .container{
+  padding: 0;
 }
-.footer_content {
-  margin: 0 20px;
-  padding: 20px 0;
-}
-.footer p,a {
-  color: #ffffff;
-}
-.footer_content_address {
-  margin: 44px 0;
-}
+
