@@ -5,10 +5,11 @@ import Footer from '../components/footer'
 import kea from '../images/kea.jpg';
 import bookmarkIcon from '../images/bookmarkIcon.svg';
 import shareIcon from '../images/shareIcon.svg';
-import editIcon from '../images/editIcon.svg';
+// import editIcon from '../images/editIcon.svg';
 import Card from 'react-bootstrap/Card';
 import './DraftUploadPageStyle.css';
 import profileIcon from '../images/pukeko.jpg';
+import { MdModeEditOutline } from "react-icons/md";
 
 function DraftUploadPage() {
   return (
@@ -35,7 +36,8 @@ function DraftUploadPage() {
             <img  src={profileIcon} alt="user avatar" className='img-fluid rounded-circle'/>
             <h4>User name</h4>
           </div>
-          <img  src={editIcon} alt="share" className='share icon'/> 
+          {/* <img  src={editIcon} alt="share" className='share icon'/>  */}
+          <MdModeEditOutline className='icon-large'/>
         </div>
         <div>
           <p>Found this guy while I was tramping, what a cool photo!</p>

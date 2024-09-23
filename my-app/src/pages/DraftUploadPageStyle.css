@@ -40,6 +40,12 @@
 .post_content_user-details h4{
     margin: 0;
 }
+.post_content_user-details {
+    margin-bottom: 20px;
+}
 .post_content {
     height: 80vh;
+}
+.icon-large {
+    font-size: 24px;
 }
