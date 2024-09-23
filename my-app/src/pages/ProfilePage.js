@@ -26,16 +26,16 @@ function ProfilePage() {
           <h1>Profile</h1>
         </div>
         <div className='profile_content' id='bootsrtap-overrides'>
-          <Container>
+          <Container id='profile_content-pading'>
             <Row className='profile_content_details'>
               <Col xs={6} className='profile_content_details_avatar d-flex justify-content-center align-items-center'>
                 <img  src={profileIcon} alt="user avatar" className='img-fluid rounded-circle'/>
               </Col>
               <Col xs={6} className='profile_content_details_name'>
-               <h2>Olivia</h2>
-               <div className='d-flex align-items-center'>
+               <h3>Olivia</h3>
+               <div className='d-flex ' id='profile_content_details_location'>
                 <FaLocationDot />
-                <p >Ackland New Zealand</p>
+                <p>Ackland New Zealand</p>
                </div>
 
                 <p>5 followers</p>
