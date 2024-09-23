@@ -35,7 +35,7 @@ function LoginPage() {
 
       <div class="sign-up-link">
         <h2>Don't have an account?</h2>
-        <a href="">Sign up</a>
+        <a href="/sign-up">Sign up</a>
       </div>
     </div>
   )
