@@ -12,7 +12,7 @@ function AddComment() {
             <img  src={profileIcon} alt="user avatar" className='img-fluid rounded-circle'/>
             <input type="text" placeholder="Add a comment"/>
           </div>
-          <img  src={sendCommentIcon} alt="share" className='send comment icon'/> 
+          <img  src={sendCommentIcon} alt="send comment icon"/> 
         </div>
     );
 }
