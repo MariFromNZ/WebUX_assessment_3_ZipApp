@@ -10,6 +10,7 @@ import Card from 'react-bootstrap/Card';
 import './DraftUploadPageStyle.css';
 import profileIcon from '../images/userPhoto.png';
 import { MdModeEditOutline } from "react-icons/md";
+import AddComment from '../components/AddComment';
 
 function DraftUploadPage() {
   return (
@@ -43,8 +44,9 @@ function DraftUploadPage() {
           <p>Found this guy while I was tramping, what a cool photo!</p>
           <hr></hr>
           <p>No comments yet</p>
-          </div>
+        </div>
       </div>
+      <AddComment></AddComment>
       <footer>
         <Footer/>
       </footer>
