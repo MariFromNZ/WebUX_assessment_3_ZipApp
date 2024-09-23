@@ -7,6 +7,7 @@ import CommunityPage from './pages/CommunityPage';
 import DraftUploadPage from './pages/DraftUploadPage';
 import ProfilePage from './pages/ProfilePage';
 import LoginPage from './pages/LoginPage';
+import SignUpPage from './pages/SignUpPage'
 
 import {
   createBrowserRouter,
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <LoginPage/>,
+  },
+  {
+    path: "sign-up",
+    element: <SignUpPage/>,
   }
 ]);
 
