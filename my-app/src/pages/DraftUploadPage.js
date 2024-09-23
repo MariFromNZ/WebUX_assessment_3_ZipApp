@@ -1,14 +1,14 @@
+// (Mariia) created post page
+//-------------------------------------------------------------------------------------------------------------//
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
-
 import kea from '../images/kea.jpg';
 import bookmarkIcon from '../images/bookmarkIcon.svg';
 import shareIcon from '../images/shareIcon.svg';
-// import editIcon from '../images/editIcon.svg';
 import Card from 'react-bootstrap/Card';
 import './DraftUploadPageStyle.css';
-import profileIcon from '../images/pukeko.jpg';
+import profileIcon from '../images/userPhoto.png';
 import { MdModeEditOutline } from "react-icons/md";
 
 function DraftUploadPage() {
@@ -34,7 +34,7 @@ function DraftUploadPage() {
         <div className='post_content_user-details d-flex justify-content-between align-items-center'>
           <div className='d-flex justify-content-start align-items-center'>
             <img  src={profileIcon} alt="user avatar" className='img-fluid rounded-circle'/>
-            <h4>User name</h4>
+            <h4>Olivia</h4>
           </div>
           {/* <img  src={editIcon} alt="share" className='share icon'/>  */}
           <MdModeEditOutline className='icon-large'/>

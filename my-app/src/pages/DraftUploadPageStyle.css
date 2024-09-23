@@ -1,3 +1,4 @@
+/* (Mariia) style for post page,cards */
 * {
     padding: 0;
     margin: 0;
@@ -33,10 +34,6 @@
 .post_content_user-details img:last-child{
     height: 20px;
 }
-/*just to see white edit icon - need to change for dark one
-/* .post_content_user-details{
-    background-color: blue;
-} */
 .post_content_user-details h4{
     margin: 0;
 }
