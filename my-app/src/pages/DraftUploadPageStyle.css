@@ -15,7 +15,7 @@
     white-space: nowrap;
 }
 .card_icons-big img {
-    width:1rem;
+    width:1.5rem;
     height:1.5rem;
     margin: 0 5px;
 }
@@ -23,5 +23,23 @@
     width: 20%;
 }
 .card-info {
-    width:80%;
+    width: 80%;
+}
+.post_content_user-details img:first-child{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+.post_content_user-details img:last-child{
+    height: 20px;
+}
+/*just to see white edit icon - need to change for dark one
+/* .post_content_user-details{
+    background-color: blue;
+} */
+.post_content_user-details h4{
+    margin: 0;
+}
+.post_content {
+    height: 80vh;
 }
