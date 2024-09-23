@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import CommunityPage from './pages/CommunityPage';
 import DraftUploadPage from './pages/DraftUploadPage';
 import ProfilePage from './pages/ProfilePage';
+import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage'
 
@@ -18,7 +19,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <HomePage/>,
   },
   {
     path: "community",
