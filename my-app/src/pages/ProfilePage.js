@@ -1,7 +1,8 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
-import profileIcon from '../images/pukeko.jpg';
+import profileIcon from '../images/userPhoto.png';
+import pukeko from '../images/pukeko.jpg'
 import weka from '../images/weka.jpg';
 import spottedLizard from '../images/spottedLizard.jpg';
 import greenLizard from '../images/greenLizard.jpg';
@@ -91,7 +92,7 @@ function ProfilePage() {
 
               <Col xs={6}>
                 <Card className='card-position'>
-                  <Card.Img variant="top" src={profileIcon} alt="user avatar" />
+                  <Card.Img variant="top" src={pukeko} alt="pukeko bird" />
                   <Card.Body className='d-flex justify-content-between align-items-center'>
                     <Card.Title className='card-transparent-bg card-title-overlay'>Pukeko</Card.Title>
                     <div className='card_icons d-flex'>
@@ -134,7 +135,7 @@ function ProfilePage() {
 
               <Col xs={6}>
                 <Card className='card-position'>
-                  <Card.Img variant="top" src={profileIcon} alt="user avatar" />
+                  <Card.Img variant="top" src={pukeko} alt="pukeko bird" />
                   <Card.Body className='d-flex justify-content-between align-items-center'>
                     <Card.Title className='card-transparent-bg card-title-overlay'>Pukeko</Card.Title>
                     <div className='card_icons d-flex'>
