@@ -1,3 +1,5 @@
+// Zach's nav-bar component
+
 import {useRef} from "react";
 import {FaBars, FaTimes} from "react-icons/fa";
 import "./navStyle.css"
@@ -18,6 +20,7 @@ function Navbar() {
                 <a href="/community">Community</a>
                 <a href="/draft-upload">Upload</a>
                 <a href="/profile">Profile</a>
+                <a href="/login">Login</a>
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                     <FaTimes/>
                 </button>
