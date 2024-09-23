@@ -1,0 +1,104 @@
+/*(Gaston) style for home page*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.top-image-section{
+    padding: 20px;
+    color: #fff;
+    background-image: url(../images/homePageTopImage.jpg);
+    background-size: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-image-section h1{
+    padding-top: 20px;
+    font-weight: 500;
+    font-size: 42px;
+}
+
+.top-image-section h3{
+    font-weight: 400;
+    font-size: 22px;
+    width: 80%;
+}
+
+.copyright-text h6{
+    font-weight: 300;
+}
+
+.hiw-section{
+    background-color: #363636;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hiw-section h1{
+    margin-bottom: 20px;
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.hiw-section hr{
+    background-color: #fff;
+    opacity: 100%;
+    height: 5px;
+    width: 100px;
+    margin-top: 18px;
+}
+
+.hiw-icons{
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hiw-numbering{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+#hiw-number{
+    border-radius: 100px;
+    width: 22px;
+    height: 22px;
+    color: #363636;
+    background-color: #fff;
+    border: 3px solid white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#hiw-number h1{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.hiw-p{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#hiw-txt p{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+

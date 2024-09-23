@@ -1,3 +1,5 @@
+// Zach's nav-bar component
+
 import {useRef} from "react";
 import {FaBars, FaTimes} from "react-icons/fa";
 import "./navStyle.css"
