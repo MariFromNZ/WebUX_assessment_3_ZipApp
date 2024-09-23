@@ -1,7 +1,10 @@
+// (Mariia) created profile page
+//-------------------------------------------------------------------------------------------------------------//
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
-import profileIcon from '../images/pukeko.jpg';
+import profileIcon from '../images/userPhoto.png';
+import pukeko from '../images/pukeko.jpg'
 import weka from '../images/weka.jpg';
 import spottedLizard from '../images/spottedLizard.jpg';
 import greenLizard from '../images/greenLizard.jpg';
@@ -25,16 +28,16 @@ function ProfilePage() {
           <h1>Profile</h1>
         </div>
         <div className='profile_content' id='bootsrtap-overrides'>
-          <Container>
+          <Container id='profile_content-pading'>
             <Row className='profile_content_details'>
               <Col xs={6} className='profile_content_details_avatar d-flex justify-content-center align-items-center'>
                 <img  src={profileIcon} alt="user avatar" className='img-fluid rounded-circle'/>
               </Col>
               <Col xs={6} className='profile_content_details_name'>
-               <h2>Olivia</h2>
-               <div className='d-flex align-items-center'>
+               <h3>Olivia</h3>
+               <div className='d-flex ' id='profile_content_details_location'>
                 <FaLocationDot />
-                <p >Ackland New Zealand</p>
+                <p>Ackland New Zealand</p>
                </div>
 
                 <p>5 followers</p>
@@ -91,7 +94,7 @@ function ProfilePage() {
 
               <Col xs={6}>
                 <Card className='card-position'>
-                  <Card.Img variant="top" src={profileIcon} alt="user avatar" />
+                  <Card.Img variant="top" src={pukeko} alt="pukeko bird" />
                   <Card.Body className='d-flex justify-content-between align-items-center'>
                     <Card.Title className='card-transparent-bg card-title-overlay'>Pukeko</Card.Title>
                     <div className='card_icons d-flex'>
@@ -134,7 +137,7 @@ function ProfilePage() {
 
               <Col xs={6}>
                 <Card className='card-position'>
-                  <Card.Img variant="top" src={profileIcon} alt="user avatar" />
+                  <Card.Img variant="top" src={pukeko} alt="pukeko bird" />
                   <Card.Body className='d-flex justify-content-between align-items-center'>
                     <Card.Title className='card-transparent-bg card-title-overlay'>Pukeko</Card.Title>
                     <div className='card_icons d-flex'>

@@ -7,12 +7,22 @@
     padding: 20px;
   }
   .profile_content_details_avatar img{
-    width: 135px;
-    height: 135px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
+  }
+  #profile_content_details_location {
+    margin-bottom: 10px;
+  }
+  #profile_content-pading {
+    padding: 10px 0;
+  }
+  .profile_content_details_name h3 {
+    margin-bottom: 20px;
   }
   .profile_content_details_name p {
     margin-bottom: 0;
+    font-size: 14px;
   }
   .profile_content_details {
     margin-bottom: 40px;
