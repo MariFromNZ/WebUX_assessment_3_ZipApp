@@ -48,6 +48,10 @@
  .card-title {
     color: #ffffff;
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%;
+    white-space: nowrap;
  }
  .card_icons img{
     width:1rem;
