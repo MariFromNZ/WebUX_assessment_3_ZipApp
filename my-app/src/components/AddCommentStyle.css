@@ -1,0 +1,25 @@
+.comment_box {
+    background-color: #363636;
+    color: white;
+    height: 77px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+.comment_box img:first-child{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+.comment_box img:last-child{
+    height: 20px;
+}
+.comment_box input {
+    background-color: #363636;
+    border: none;
+}
+.comment_box ::placeholder {
+    color: #fff;
+}
+.comment_box :focus {
+    color: #fff;
+}
