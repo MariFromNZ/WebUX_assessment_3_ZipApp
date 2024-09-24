@@ -9,6 +9,8 @@ import ProfilePage from './pages/ProfilePage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage'
+import CameraPage from './pages/CameraPage';
+import EditPostPage from './pages/EditPostPage';
 
 import {
   createBrowserRouter,
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
   {
     path: "sign-up",
     element: <SignUpPage/>,
+  },
+  {
+    path: "camera",
+    element: <CameraPage/>,
+  },
+  {
+    path: "edit-post",
+    element: <EditPostPage/>,
   }
 ]);
 

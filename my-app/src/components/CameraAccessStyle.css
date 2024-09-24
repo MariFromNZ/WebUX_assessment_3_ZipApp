@@ -1,0 +1,55 @@
+/* (Gaston) style for camera access */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.pop-up{
+    height: 275px;
+    width: 350px;
+    margin: auto;
+    border-radius: 25px;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pop-up h1{
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.pop-up h2{
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.btn-y{
+    padding: 10px;
+    background: rgb(44,182,180);
+    background: linear-gradient(90deg, rgba(44,182,180,1) 0%, rgba(25,134,163,1) 100%);
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
+
+.btn-n{
+    padding: 10px;
+    background: grey;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
