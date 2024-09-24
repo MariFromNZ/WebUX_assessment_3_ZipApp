@@ -18,7 +18,7 @@ function Navbar() {
             <nav ref={navRef}>
                 <a href="/">Home</a>
                 <a href="/community">Community</a>
-                <a href="/draft-upload">Upload</a>
+                <a href="/camera">Upload</a>
                 <a href="/profile">Profile</a>
                 <a href="/login">Login</a>
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
