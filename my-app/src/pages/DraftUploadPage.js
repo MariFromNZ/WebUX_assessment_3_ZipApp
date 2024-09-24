@@ -57,7 +57,15 @@ function DraftUploadPage() {
           <hr></hr>
           <div id='commentsBlock' >
             {comments.length > 0 ? (
-               comments.map((comment, index) => (<p key={index}>{comment}</p> 
+               comments.map((comment, index) => (
+               
+                <div key={index} className='post_content_user-details d-flex justify-content-between align-items-center'>
+                  <div className='d-flex justify-content-start align-items-center'>
+                    <img src={profileIcon} alt="user avatar" className='img-fluid rounded-circle' />
+                    <p>{comment}</p> {/* show comment */}
+                  </div>
+                  <MdModeEditOutline className='icon-large' />
+                </div>
                 ))
              ) : (
                <p>No comments yet</p> // initial messsage

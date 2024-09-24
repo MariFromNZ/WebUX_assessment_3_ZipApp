@@ -37,6 +37,9 @@
 .post_content_user-details h4{
     margin: 0;
 }
+.post_content_user-details p{
+    margin: 0;
+}
 .post_content_user-details {
     margin-bottom: 20px;
 }
