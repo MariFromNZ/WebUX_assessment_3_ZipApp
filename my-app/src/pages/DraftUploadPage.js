@@ -12,7 +12,20 @@ import profileIcon from '../images/userPhoto.png';
 import { MdModeEditOutline } from "react-icons/md";
 import AddComment from '../components/AddComment';
 
+import { useState } from 'react';
+
 function DraftUploadPage() {
+
+    const [input, setInput] = useState(""); 
+    const [comments, setComments] = useState([]); //to store inputs
+
+    const addComment = () => {
+      if (input.trim() !== "") { // check input that is not empty
+          setComments([...comments, input]); // add new item to array
+          setInput(""); // clear input after add item
+      }
+    };
+
   return (
     <div>
       <Navbar></Navbar>
@@ -37,16 +50,23 @@ function DraftUploadPage() {
             <img  src={profileIcon} alt="user avatar" className='img-fluid rounded-circle'/>
             <h4>Olivia</h4>
           </div>
-          {/* <img  src={editIcon} alt="share" className='share icon'/>  */}
           <MdModeEditOutline className='icon-large'/>
         </div>
         <div>
           <p>Found this guy while I was tramping, what a cool photo!</p>
           <hr></hr>
-          <p>No comments yet</p>
+          <div id='commentsBlock' >
+            {comments.length > 0 ? (
+               comments.map((comment, index) => (<p key={index}>{comment}</p> 
+                ))
+             ) : (
+               <p>No comments yet</p> // initial messsage
+              )}
+
+          </div>
         </div>
       </div>
-      <AddComment></AddComment>
+      <AddComment input={input} setInput={setInput} addComment={addComment}/>
       <footer>
         <Footer/>
       </footer>
