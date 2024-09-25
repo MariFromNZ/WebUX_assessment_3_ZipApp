@@ -19,15 +19,15 @@ mongoose.connect(uri)
 
 
 app.get('/', (req, res) => {
-    res.send('Hello from backend!');
+    res.send('Hello from backend!Test');
 });
 
-app.get('/test', (req, res) => {
-    res.send("GET Request Called")
+app.get('/comments', (req, res) => {
+    res.send("GET Request called comments")
 })
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
