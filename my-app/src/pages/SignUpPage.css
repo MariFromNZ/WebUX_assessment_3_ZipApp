@@ -9,15 +9,15 @@
     font-family: "Roboto", sans-serif;
 }
 
-.container .names {
+form .names {
     display: flex;
     gap: 15px;
 }
 
-.container .names input {
+form .names input {
     width: 100%;
 }
 
-.container a {
+form a {
     text-align: center;
 }
