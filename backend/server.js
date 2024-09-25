@@ -22,6 +22,10 @@ app.get('/', (req, res) => {
     res.send('Hello from backend!');
 });
 
+app.get('/test', (req, res) => {
+    res.send("GET Request Called")
+})
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
