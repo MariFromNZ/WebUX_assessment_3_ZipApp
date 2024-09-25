@@ -1,6 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const app = express();
+
+app.use(cors());
 
 //Conection uri  (MongoDB Atlas)
 var uri = "mongodb+srv://mariiafotina:D7mhQndOVXJsnfoo@cluster0.c4avl.mongodb.net/DataBase1?retryWrites=true&w=majority&appName=Cluster0";
@@ -14,12 +17,14 @@ mongoose.connect(uri)
     console.error("Error connecting to MongoDB Atlas:", error);
 });
 
+
 app.get('/', (req, res) => {
     res.send('Hello from backend!');
 });
 
 
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
