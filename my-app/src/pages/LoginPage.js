@@ -1,6 +1,6 @@
 // Zach's login page
 
-import React from 'react'
+import React, { useState } from 'react'
 import zipLogoBig from "../images/zipLogoBig.svg"
 import googleLogo from "../images/googleLogo.svg"
 import appleLogo from "../images/appleLogo.svg"
@@ -9,19 +9,29 @@ import './LoginStyle.css'
 
 
 function LoginPage() {
+
+  const submitForm = (e) => {
+    e.preventDefault()
+
+    const formData = new FormData(e.target)
+    const payload = Object.fromEntries(formData)
+
+    console.log(payload)
+  }
+
   return (
-    <div class="container">
+    <form onSubmit={submitForm}>
       <img class="logo" src={zipLogoBig}></img>
 
       <h1>Log in</h1>
 
       <label for="username">Username</label>
-      <input type="text" id="username" placeholder='John'></input>
+      <input name="username" type="text" id="username" placeholder='John'></input>
 
       <label for="password">Password</label>
-      <input type="text" id="password" placeholder='********'></input>
+      <input name="password" type="password" id="password" placeholder='********'></input>
 
-      <button>Log in</button>
+      <button variant="primary" type="submit">Log in</button>
 
       <a href="" class="forgot-pw">Forgot your password?</a>
 
@@ -37,7 +47,7 @@ function LoginPage() {
         <h2>Don't have an account?</h2>
         <a href="/sign-up">Sign up</a>
       </div>
-    </div>
+    </form>
   )
 }
 

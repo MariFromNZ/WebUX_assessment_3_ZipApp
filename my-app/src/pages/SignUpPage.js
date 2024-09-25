@@ -6,8 +6,18 @@ import './SignUpPage.css'
 
 
 function SignUpPage() {
+
+  const submitForm = (e) => {
+    e.preventDefault()
+
+    const formData = new FormData(e.target)
+    const payload = Object.fromEntries(formData)
+
+    console.log(payload)
+  }
+  
   return (
-    <div class="container">
+    <form onSubmit={submitForm}>
       <img class="logo" src={zipLogoBig}></img>
 
       <h1>Sign up</h1>
@@ -15,28 +25,28 @@ function SignUpPage() {
       <div class="names">
         <div>
             <label for="first-name">First name</label>
-            <input type="text" id="first-name" placeholder='John'></input>
+            <input name="firstName" type="text" id="first-name" placeholder='John'></input>
         </div>
 
         <div>
             <label for="last-name">First name</label>
-            <input type="text" id="last-name" placeholder='Doe'></input>
+            <input name="lastName" type="text" id="last-name" placeholder='Doe'></input>
         </div>
       </div>
 
       <label for="email-address">Email</label>
-      <input type="email" id="email-address" placeholder='JohnDoe@gmail.com'></input>
+      <input name="email" type="email" id="email-address" placeholder='JohnDoe@gmail.com'></input>
 
       <label for="password">Password</label>
-      <input type="text" id="password" placeholder='********'></input>
+      <input  name="password" type="password" id="password" placeholder='Password'></input>
 
       <label for="confirm-password">Confirm password</label>
-      <input type="text" id="confirm-password" placeholder='********'></input>
+      <input name="confirmPassword" type="password" id="confirmPassword" placeholder='Confirm password'></input>
 
-      <button>Sign up</button>
+      <button variant="primary" type="submit">Sign up</button>
 
       <a href="/login">Go back to login</a>
-    </div>
+    </form>
   )
 }
 
