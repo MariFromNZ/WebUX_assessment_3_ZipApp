@@ -35,13 +35,13 @@ form input {
     border-color: #afb1b6;
     border-radius: none;
     border-style: solid;
-    margin-bottom: 25px;
 }
 
 form label {
     font-size: 18px;
     font-weight: 500;
     padding-bottom: 5px;
+    margin-top: 25px;
 }
 
 form button {
@@ -53,6 +53,7 @@ form button {
     font-size: 18px;
     color: #fff;
     margin-bottom: 15px;
+    margin-top: 25px;
 }
 
 form a {
@@ -89,4 +90,8 @@ form .sign-up-link {
 
 form .sign-up-link a {
     margin-top: 35px;
+}
+
+.error {
+    color: red;
 }
