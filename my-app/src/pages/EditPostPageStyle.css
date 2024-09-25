@@ -4,3 +4,96 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.edit-post-container{
+    width: 100%;
+}
+
+.post-photo{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+    height: 300px;
+    width: auto;
+    background-image: url(../images/cameraImage.jpg);
+    background-size: 100%;
+    background-position-y: -100px;
+}
+
+.add-photo-icon{
+    width: 50px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.post-species{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.post-description{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.post-location{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+input {
+    padding: 10px 5px;
+    background-color: none;
+    border-color: #afb1b6;
+    border-radius: none;
+    border-style: solid;
+    margin-bottom: 25px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.post-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 100px;
+}
+
+.btn-discard{
+    padding: 10px;
+    background: grey;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    height: 50px;
+    width: 175px;
+}
+
+.btn-post{
+    padding: 10px;
+    background: rgb(44,182,180);
+    background: linear-gradient(90deg, rgba(44,182,180,1) 0%, rgba(25,134,163,1) 100%);
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    height: 50px;
+    width: 175px;
+}
