@@ -22,9 +22,7 @@ import { getComments } from '../APIClient/comments';
 function HomePage() {
 
     const [comments, setComments] = useState([]); 
-
-  useEffect(() => {
-
+    useEffect(() => {
     getComments()
       .then(res => {
         console.log("Got back response:", res);
@@ -33,16 +31,20 @@ function HomePage() {
       .catch(err => {
         console.error("Error fetching comments:", err);
       });
-  }, []); 
+    }, []); 
 
   return (
     <div>
         <Navbar></Navbar>
         <div className='top-image-section'>
             <h1>Haere mai to Zip App</h1>
+
+
             <div>
-                {comments}
+                {comments} 
             </div>
+
+
             <h3>Discover, share, learn, and connect with others who care about the beauty of Te Taiao Aotearoa.</h3>
             <div className='copyright-text'>
                 <h6>Eli Prater</h6>
