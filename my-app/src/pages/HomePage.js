@@ -15,6 +15,7 @@ import spottedLizard from '../images/spottedLizard.jpg';
 import bookmarkIcon from '../images/bookmarkIcon.svg';
 import shareIcon from '../images/shareIcon.svg';
 
+
 /*Mariia calling get */
 import React, { useEffect, useState } from 'react';//instead of import React from 'react' on the top
 import { getComments } from '../APIClient/comments';
@@ -87,10 +88,12 @@ function HomePage() {
                 <Card.Img variant="top" src={kea} alt="kea on stone" />
                 <Card.Body>
                     <div className='d-flex justify-content-between align-items-center'>
-                        <div className='card-info'>
+                        <a href='post-description' className='card_link'>
+                            <div className='card-info'>
                             <Card.Title className='card-transparent-bg card-title-overlay'>Kea</Card.Title>
                              <Card.Text>Aoraki/Mount Cook National Park, Aoraki 7999</Card.Text>
-                        </div>
+                            </div>
+                        </a>
                         <div className='card_icons-big d-flex justify-content-end'>
                             <img  src={bookmarkIcon} alt="bookmark" className='bookmark icon'/>
                             <img  src={shareIcon} alt="share" className='share icon'/>

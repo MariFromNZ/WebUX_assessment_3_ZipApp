@@ -7,14 +7,14 @@ import kea from '../images/kea.jpg';
 import bookmarkIcon from '../images/bookmarkIcon.svg';
 import shareIcon from '../images/shareIcon.svg';
 import Card from 'react-bootstrap/Card';
-import './DraftUploadPageStyle.css';
+import './PostDescriptionPageStyle.css';
 import profileIcon from '../images/userPhoto.png';
 import { MdModeEditOutline } from "react-icons/md";
 import AddComment from '../components/AddComment';
 
 import { useState } from 'react';
 
-function DraftUploadPage() {
+function PostDescriptionPage() {
 
     const [input, setInput] = useState(""); 
     const [comments, setComments] = useState([]); //to store inputs
@@ -82,4 +82,4 @@ function DraftUploadPage() {
   )
 }
 
-export default DraftUploadPage
+export default PostDescriptionPage
