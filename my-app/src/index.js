@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CommunityPage from './pages/CommunityPage';
-import DraftUploadPage from './pages/DraftUploadPage';
+import PostDescriptionPage from './pages/PostDescriptionPage';
 import ProfilePage from './pages/ProfilePage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
@@ -28,8 +28,8 @@ const router = createBrowserRouter([
     element: <CommunityPage/>,
   },
   {
-    path: "draft-upload",
-    element: <DraftUploadPage/>,
+    path: "post-description",
+    element: <PostDescriptionPage/>,
   },
   {
     path: "profile",

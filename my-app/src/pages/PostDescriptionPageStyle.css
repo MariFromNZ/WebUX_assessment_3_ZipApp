@@ -22,6 +22,12 @@
 }
 .card_icons-big {
     width: 20%;
+    /* margin-left: auto; */
+}
+
+.card_link{
+    text-decoration: none;
+    width: 80%;
 }
 .card-info {
     width: 80%;
