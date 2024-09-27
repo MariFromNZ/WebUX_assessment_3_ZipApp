@@ -66,8 +66,11 @@ app.get('/comments', (req, res) => {
 
 // POST comments
 app.post('/comments', (req, res) => {
+  const lastComment = comments[comments.length - 1]; // get the last comment
+  const newCommentId = lastComment ? lastComment.id + 1 : 1; 
+
     const newComment = {
-        id: comments.length + 1, // id 
+        id: newCommentId, // id 
         text: req.body.text // get the comment text from request body
     };
     comments.push(newComment); // add new comment to the array

@@ -1,7 +1,7 @@
-// (Mariia) created post page
+// (Mariia) created post page and connected to backend
 // Zach made comment editable and able to be deleted
 //-------------------------------------------------------------------------------------------------------------//
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/footer';
 import kea from '../images/kea.jpg';
@@ -13,35 +13,69 @@ import profileIcon from '../images/userPhoto.png';
 import { MdModeEditOutline } from "react-icons/md";
 import AddComment from '../components/AddComment';
 
+import { getComments, addComments, deleteComments, updateComments } from '../APIClient/comments';
+
 function PostDescriptionPage() {
     const [input, setInput] = useState(""); 
     const [comments, setComments] = useState([]); // to store comments
     const [editIndex, setEditIndex] = useState(null); // index of comment being edited
     const [editInput, setEditInput] = useState(''); // store input for editing
 
+    // take comments from server
+    useEffect(() => {
+        getComments() 
+            .then(response => {
+
+                setComments(response.data); 
+            })
+            .catch(error => {
+                console.error("Error fetching comments:", error);
+            });
+    }, []);
+
     const addComment = () => {
         if (input.trim() !== "") { // ensure input is not empty
-            setComments([...comments, input]); // add to comments
-            setInput(""); // clear input
+            const newComment = { text: input }; 
+            addComments(newComment) // take comments to server
+                .then(response => {
+                    setComments([...comments, response.data]); 
+                    setInput(""); 
+                })
+                .catch(error => {
+                    console.error("Error adding comment:", error); 
+                });
         }
     };
 
     const startEditComment = (index) => {
         setEditIndex(index); // set the index of the comment being edited
-        setEditInput(comments[index]); // load the comment into the edit input
+        setEditInput(comments[index].text); // load the comment into the edit input
     };
 
-    const saveEditComment = (index) => {
-        const updatedComments = [...comments];
-        updatedComments[index] = editInput; // update the comment
-        setComments(updatedComments);
-        setEditIndex(null); // clear edit index
-        setEditInput(''); // clear edit input
+    const saveEditComment = (id, index) => {
+        const updatedComment = { text: editInput }; 
+        updateComments(id, updatedComment) // send edeted comment to server
+            .then(response => {
+                const updatedComments = [...comments]; 
+                updatedComments[index] = response.data; 
+                setComments(updatedComments); 
+                setEditIndex(null); 
+                setEditInput(''); 
+            })
+            .catch(error => {
+                console.error("Error updating comment:", error); 
+            });
     };
 
-    const deleteComment = (index) => {
-        const updatedComments = comments.filter((_, i) => i !== index); // remove the comment at index
-        setComments(updatedComments);
+    const deleteComment = (id, index) => {
+        deleteComments(id) 
+            .then(() => {
+                const updatedComments = comments.filter((_, i) => i !== index); //remove deleted comment
+                setComments(updatedComments); 
+            })
+            .catch(error => {
+                console.error("Error deleting comment:", error); 
+            });
     };
 
     return (
@@ -86,16 +120,16 @@ function PostDescriptionPage() {
                                                     value={editInput}
                                                     onChange={(e) => setEditInput(e.target.value)}
                                                 />
-                                                <button onClick={() => saveEditComment(index)}>Save</button>
+                                                <button onClick={() => saveEditComment(comment.id, index)}>Save</button>
                                             </>
                                         ) : (
-                                            <p>{comment}</p> // display comment
+                                            <p>{comment.text}</p> // display comment
                                         )}
                                     </div>
                                     {editIndex !== index && ( // show edit and delete buttons when not editing
                                         <>
                                             <MdModeEditOutline className='icon-large' onClick={() => startEditComment(index)} />
-                                            <button onClick={() => deleteComment(index)}>Delete</button>
+                                            <button onClick={() => deleteComment(comment.id, index)}>Delete</button>
                                         </>
                                     )}
                                 </div>
