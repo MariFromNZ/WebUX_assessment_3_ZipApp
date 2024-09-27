@@ -12,19 +12,49 @@ import profileIcon from '../images/userPhoto.png';
 import { MdModeEditOutline } from "react-icons/md";
 import AddComment from '../components/AddComment';
 
-import { useState } from 'react';
+import axios from 'axios';
+
+import { useState,useEffect } from 'react';
+import { addComments } from '../APIClient/comments';
 
 function PostDescriptionPage() {
 
     const [input, setInput] = useState(""); 
     const [comments, setComments] = useState([]); //to store inputs
 
-    const addComment = () => {
-      if (input.trim() !== "") { // check input that is not empty
-          setComments([...comments, input]); // add new item to array
-          setInput(""); // clear input after add item
+
+    // Function to fetch comments from backend 
+    const fetchComments = async () => {
+      const response = await axios.get('http://localhost:8000/comments');
+      setComments(response.data); 
+  };
+      useEffect(() => {
+      fetchComments(); 
+  }, []); 
+
+
+    // const addComment = () => {
+    //   if (input.trim() !== "") { // check input that is not empty
+    //       setComments([...comments, input]); // add new item to array
+    //       setInput(""); // clear input after add item
+    //   }
+    // };
+
+
+
+
+    const addComment = async () => {
+      if (input.trim() !== "") { // check if input is not empty
+          try {
+              const response = await addComments({text: input});
+              setComments([...comments, response.data]); // add new comment from response
+              setInput(""); // clear input after adding
+          } catch (error) {
+              console.error("Error adding comment:", error); // show error 
+          }
       }
-    };
+  };
+
 
   return (
     <div>
@@ -62,7 +92,7 @@ function PostDescriptionPage() {
                 <div key={index} className='post_content_user-details d-flex justify-content-between align-items-center'>
                   <div className='d-flex justify-content-start align-items-center'>
                     <img src={profileIcon} alt="user avatar" className='img-fluid rounded-circle' />
-                    <p>{comment}</p> {/* show comment */}
+                    <p>{comment.text}</p> {/* show comment */}
                   </div>
                   <MdModeEditOutline className='icon-large' />
                 </div>
