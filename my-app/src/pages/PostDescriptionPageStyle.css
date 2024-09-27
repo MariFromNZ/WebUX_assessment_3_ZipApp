@@ -1,13 +1,16 @@
 /* (Mariia) style for post page,cards */
+/* (Zach) made styles for editable comment */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
+
 .post_content{
     margin: 20px;
 }
+
 .card-text {
     color: #ffffff;
     overflow: hidden;
@@ -15,11 +18,13 @@
     width: 80%;
     white-space: nowrap;
 }
+
 .card_icons-big img {
     width:1.5rem;
     height:1.5rem;
     margin: 0 5px;
 }
+
 .card_icons-big {
     width: 20%;
     /* margin-left: auto; */
@@ -29,29 +34,60 @@
     text-decoration: none;
     width: 80%;
 }
+
 .card-info {
     width: 80%;
 }
+
 .post_content_user-details img:first-child{
     width: 35px;
     height: 35px;
     margin-right: 10px;
 }
+
 .post_content_user-details img:last-child{
     height: 20px;
 }
+
 .post_content_user-details h4{
     margin: 0;
 }
+
 .post_content_user-details p{
     margin: 0;
 }
+
 .post_content_user-details {
     margin-bottom: 20px;
 }
+
 .post_content {
     height: 80vh;
 }
-.icon-large {
+
+.edit-comment {
     font-size: 24px;
+    margin-left: auto;
+    
+    margin-right: 20px;
+}
+.delete-comment {
+    font-size: 20px;
+}
+
+.edit-input {
+    margin-bottom: -9px;
+    border-color: darkgray;
+}
+
+.save-button {
+    padding: 10px;
+    background: rgb(44,182,180);
+    background: linear-gradient(90deg, rgba(44,182,180,1) 0%, rgba(25,134,163,1) 100%);
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 9px;
+    margin-left: 10px;
 }

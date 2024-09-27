@@ -9,6 +9,7 @@
     width: 35px;
     height: 35px;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 .comment_box img:last-child{
     height: 20px;
@@ -22,4 +23,8 @@
 }
 .comment_box :focus {
     color: #fff;
+}
+.comment_box input {
+    margin-top: 15px;
+    outline: none;
 }
