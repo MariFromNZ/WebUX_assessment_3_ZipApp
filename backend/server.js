@@ -44,9 +44,14 @@ const comments = [
                             //////////////////////////schema for database////////////////////////////////
 
 // const commentSchema = new mongoose.Schema({
-//     text: {
-//         type: String,
-//     }
+//   id: {
+//       type: Number,
+//       required: true,
+//       unique: true
+//   },
+//   text: {
+//       type: String,
+//   }
 // });
 // const Comment = mongoose.model('Comment', commentSchema);
 
@@ -70,6 +75,35 @@ app.post('/comments', (req, res) => {
     res.status(201).json(newComment); // responce
 });
 
+
+
+// DELETE comments
+app.delete('/comments/:id', (req, res) => {
+  const commentId = parseInt(req.params.id); // find comment id 
+  const commentIndex = comments.findIndex(c => c.id === commentId); // find comment index 
+  if (commentIndex < 0) { 
+    return res.status(404).json({ message: "Comment not found" });
+  }
+
+  const deletedComment = comments.splice(commentIndex, 1); // remove comment from the array
+  console.log("Deleted comment:", deletedComment);
+  res.status(200).json(deletedComment); 
+});
+
+
+// PUT comments
+app.put('/comments/:id', (req, res) => {
+  const commentId = parseInt(req.params.id); 
+  const commentIndex = comments.findIndex(c => c.id === commentId); 
+
+  if (commentIndex < 0) { 
+    return res.status(404).json({ message: "Comment not found" });
+  }
+
+  comments[commentIndex].text = req.body.text; // update comment text
+  console.log("Updated comment:", comments[commentIndex]);
+  res.status(200).json(comments[commentIndex]); 
+});
 
 
 const PORT = process.env.PORT || 8000;
