@@ -1,5 +1,5 @@
 /*(Gaston) creating home page*/
-// import React from 'react'
+import React from 'react'
 import './HomePageStyle.css';
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
@@ -17,22 +17,22 @@ import shareIcon from '../images/shareIcon.svg';
 
 
 /*Mariia calling get */
-import React, { useEffect, useState } from 'react';//instead of import React from 'react' on the top
-import { getComments } from '../APIClient/comments';
+// import React, { useEffect, useState } from 'react';//instead of import React from 'react' on the top
+// import { getComments } from '../APIClient/comments';
 
 function HomePage() {
 
-    const [comments, setComments] = useState([]); 
-    useEffect(() => {
-    getComments()
-      .then(res => {
-        console.log("Got back response:", res);
-        setComments(res.data); 
-      })
-      .catch(err => {
-        console.error("Error fetching comments:", err);
-      });
-    }, []); 
+    // const [comments, setComments] = useState([]); 
+    // useEffect(() => {
+    // getComments()
+    //   .then(res => {
+    //     console.log("Got back response:", res);
+    //     setComments(res.data); 
+    //   })
+    //   .catch(err => {
+    //     console.error("Error fetching comments:", err);
+    //   });
+    // }, []); 
 
   return (
     <div>
@@ -41,9 +41,9 @@ function HomePage() {
             <h1>Haere mai to Zip App</h1>
 
 
-            <div>
+            {/* <div>
                 {comments} 
-            </div>
+            </div> */}
 
 
             <h3>Discover, share, learn, and connect with others who care about the beauty of Te Taiao Aotearoa.</h3>
