@@ -1,3 +1,5 @@
+// (Mariia) worked with backend and database
+//-------------------------------------------------------------------------------------------------------------//
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -24,88 +26,87 @@ app.get('/', (req, res) => {//check backend
     res.send('Hello from backend!Test');
 });
 
-// app.get('/comments', (req, res) => {
-//     res.send("GET Request called comments")
-// })
 
+                            //////////////////////////  schema for database   ///////////////////////////////
 
-/*static comments table*/
-const comments = [
-    { id: 1, text: "first comment" },
-    { id: 2, text: "second comment" },
-    { id: 3, text: "third comment" },
-  ];
-
-// router.get('/comments', (req, res) => {
-//     res.json(comments); // send static comments as JSON
-// });
-
-
-                            //////////////////////////schema for database////////////////////////////////
-
-// const commentSchema = new mongoose.Schema({
-//   id: {
-//       type: Number,
-//       required: true,
-//       unique: true
-//   },
-//   text: {
-//       type: String,
-//   }
-// });
-// const Comment = mongoose.model('Comment', commentSchema);
+const commentSchema = new mongoose.Schema({
+  text: {
+      type: String,
+  }
+});
+const Comment = mongoose.model('Comment', commentSchema);
 
 
 
+                            //////////////////////////   CRUD for comments   ////////////////////////////////
 
+// GET all comments
 app.get('/comments', (req, res) => {
-    res.json(comments);
+  Comment.find() // find all comments in MongoDB
+    .then(comments => {
+      res.json(comments); // send comments as JSON 
+    })
+    .catch(error => {
+      res.status(500).json({ message: 'Error fetching comments', error });
+    });
 });
 
+// GET  comment by id
+app.get('/comments/:id', (req, res) => {
+  Comment.findById(req.params.id) // find comment by id in MongoDB
+      .then(comment => {
+          if (!comment) {
+              return res.status(404).json({ message: "Comment not found" });
+          }
+          res.status(200).json(comment);// send comments as JSON 
+      })
+      .catch(error => {
+          console.error("Error fetching comment:", error);
+          res.status(500).json({ message: 'Error fetching comment', error });
+      });
+});
 
-
-// POST comments
+// POST new comment
 app.post('/comments', (req, res) => {
-  const lastComment = comments[comments.length - 1]; // get the last comment
-  const newCommentId = lastComment ? lastComment.id + 1 : 1; 
+  const newComment = new Comment({
+    text: req.body.text // take text from comment 
+  });
 
-    const newComment = {
-        id: newCommentId, // id 
-        text: req.body.text // get the comment text from request body
-    };
-    comments.push(newComment); // add new comment to the array
-    console.log("all comments are:", comments);
-    res.status(201).json(newComment); // responce
+  newComment.save() // save new comment in MongoDB
+    .then(comment => {
+      res.status(201).json(comment);
+    })
+    .catch(error => {
+      res.status(500).json({ message: 'Error adding comment', error });
+    });
 });
 
-
-
-// DELETE comments
+// DELETE comment
 app.delete('/comments/:id', (req, res) => {
-  const commentId = parseInt(req.params.id); // find comment id 
-  const commentIndex = comments.findIndex(c => c.id === commentId); // find comment index 
-  if (commentIndex < 0) { 
-    return res.status(404).json({ message: "Comment not found" });
-  }
-
-  const deletedComment = comments.splice(commentIndex, 1); // remove comment from the array
-  console.log("Deleted comment:", deletedComment);
-  res.status(200).json(deletedComment); 
+  Comment.findByIdAndDelete(req.params.id) // find comment in MongoDB and delete
+    .then(deletedComment => {
+      if (!deletedComment) {
+        return res.status(404).json({ message: "Comment not found" });
+      }
+      res.status(200).json(deletedComment);
+    })
+    .catch(error => {
+      res.status(500).json({ message: 'Error deleting comment', error });
+    });
 });
 
-
-// PUT comments
+// PUT comment
 app.put('/comments/:id', (req, res) => {
-  const commentId = parseInt(req.params.id); 
-  const commentIndex = comments.findIndex(c => c.id === commentId); 
-
-  if (commentIndex < 0) { 
-    return res.status(404).json({ message: "Comment not found" });
-  }
-
-  comments[commentIndex].text = req.body.text; // update comment text
-  console.log("Updated comment:", comments[commentIndex]);
-  res.status(200).json(comments[commentIndex]); 
+  Comment.findByIdAndUpdate(req.params.id, { text: req.body.text }, { new: true }) // find comment by id and update 
+    .then(updatedComment => {
+      if (!updatedComment) {
+        return res.status(404).json({ message: "Comment not found" });
+      }
+      res.status(200).json(updatedComment); 
+    })
+    .catch(error => {
+      res.status(500).json({ message: 'Error updating comment', error });
+    });
 });
 
 

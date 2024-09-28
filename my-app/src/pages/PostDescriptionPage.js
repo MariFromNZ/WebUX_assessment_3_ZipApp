@@ -1,4 +1,4 @@
-// (Mariia) created post page and connected to backend
+// (Mariia) created post page and connected to backend(comments)
 // Zach made comment editable and able to be deleted
 //-------------------------------------------------------------------------------------------------------------//
 import React, { useState, useEffect } from 'react';
@@ -53,8 +53,8 @@ function PostDescriptionPage() {
     };
 
     const saveEditComment = (id, index) => {
-        const updatedComment = { text: editInput }; 
-        updateComments(id, updatedComment) // send edeted comment to server
+        // const updatedComment = { text: editInput }; 
+        updateComments(id, editInput) // send edeted comment to server
             .then(response => {
                 const updatedComments = [...comments]; 
                 updatedComments[index] = response.data; 
@@ -120,7 +120,7 @@ function PostDescriptionPage() {
                                                     value={editInput}
                                                     onChange={(e) => setEditInput(e.target.value)}
                                                 />
-                                                <button onClick={() => saveEditComment(comment.id, index)}>Save</button>
+                                                <button onClick={() => saveEditComment(comment._id, index)}>Save</button>
                                             </>
                                         ) : (
                                             <p>{comment.text}</p> // display comment
@@ -129,7 +129,7 @@ function PostDescriptionPage() {
                                     {editIndex !== index && ( // show edit and delete buttons when not editing
                                         <>
                                             <MdModeEditOutline className='icon-large' onClick={() => startEditComment(index)} />
-                                            <button onClick={() => deleteComment(comment.id, index)}>Delete</button>
+                                            <button onClick={() => deleteComment(comment._id, index)}>Delete</button>
                                         </>
                                     )}
                                 </div>
