@@ -18,5 +18,5 @@ export const deleteComments = (id) => {
 };
 
 export const updateComments = (id, data) => {
-  return axios.put(urlPrefix + "/comments/" + id, data);
+  return axios.put(urlPrefix + "/comments/" + id, { text: data });
 };
