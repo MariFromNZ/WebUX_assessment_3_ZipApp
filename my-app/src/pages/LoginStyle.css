@@ -94,4 +94,5 @@ form .sign-up-link a {
 
 .error {
     color: red;
+    margin-top: -20px;
 }

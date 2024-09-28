@@ -27,6 +27,10 @@ const LoginPage = () => {
     try {
       await validationSchema.validate(formData, { abortEarly: false });
       console.log("Form Submitted", formData);
+      
+      // Redirect to the home page after successful validation
+      window.location.href = "/";
+
       // Reset form if needed
       setFormData({ email: "", password: "" });
     } catch (error) {
