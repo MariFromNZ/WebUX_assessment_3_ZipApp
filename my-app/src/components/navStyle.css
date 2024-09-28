@@ -7,6 +7,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    z-index: 99;
 }
 
 :root{
@@ -18,7 +19,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 100px;
     padding: 0 2rem;
     background-color: var(--mainColor);
     color: var(--textColor);
@@ -60,7 +61,7 @@ header .nav-btn {
         justify-content: center;
         gap: 1.5rem;
         background-color: var(--mainColor);
-        transition: 1s;
+        transition: 0.7s;
         transform: translateY(-100vh);
     }
 

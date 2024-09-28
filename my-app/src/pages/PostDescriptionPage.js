@@ -12,6 +12,7 @@ import './PostDescriptionPageStyle.css';
 import profileIcon from '../images/userPhoto.png';
 import { MdModeEditOutline } from "react-icons/md";
 import AddComment from '../components/AddComment';
+import {FaTrash} from "react-icons/fa";
 
 import { getComments, addComments, deleteComments, updateComments } from '../APIClient/comments';
 
@@ -116,11 +117,12 @@ function PostDescriptionPage() {
                                         {editIndex === index ? (
                                             <>
                                                 <input
+                                                    className="edit-input"
                                                     type="text"
                                                     value={editInput}
                                                     onChange={(e) => setEditInput(e.target.value)}
                                                 />
-                                                <button onClick={() => saveEditComment(comment._id, index)}>Save</button>
+                                                <button className="save-button" onClick={() => saveEditComment(comment._id, index)}>Save</button>
                                             </>
                                         ) : (
                                             <p>{comment.text}</p> // display comment
@@ -128,8 +130,8 @@ function PostDescriptionPage() {
                                     </div>
                                     {editIndex !== index && ( // show edit and delete buttons when not editing
                                         <>
-                                            <MdModeEditOutline className='icon-large' onClick={() => startEditComment(index)} />
-                                            <button onClick={() => deleteComment(comment._id, index)}>Delete</button>
+                                            <MdModeEditOutline className='edit-comment' onClick={() => startEditComment(index)} />
+                                            <FaTrash className="delete-comment" onClick={() => deleteComment(comment._id, index)}/>
                                         </>
                                     )}
                                 </div>
