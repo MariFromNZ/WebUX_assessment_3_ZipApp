@@ -2,15 +2,15 @@
 
 import {useRef} from "react";
 import {FaBars, FaTimes} from "react-icons/fa";
-import "./navStyle.css"
-import zipLogoSmall from "../images/zipLogoSmall.svg"
+import "./navStyle.css";
+import zipLogoSmall from "../images/zipLogoSmall.svg";
 
 function Navbar() {
     const navRef = useRef();
 
     const showNavbar = () => {
         navRef.current.classList.toggle("responsive_nav");
-    }
+    };
 
     return (
         <header>

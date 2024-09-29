@@ -2,7 +2,7 @@
 //-------------------------------------------------------------------------------------------------------------//
 import './AddCommentStyle.css';
 import profileIcon from '../images/userPhoto.png';
-import sendCommentIcon from '../images/sendCommentIcon.svg'
+import sendCommentIcon from '../images/sendCommentIcon.svg';
 import React from 'react';
 
 function AddComment({ input, setInput, addComment }) {
