@@ -68,6 +68,7 @@ const SignUpPage = () => {
         <div>
             <label htmlFor="first-name">First name</label>
             <input 
+              id="first-name"
               name="firstName" 
               type="text" 
               placeholder='John'
@@ -80,7 +81,8 @@ const SignUpPage = () => {
         <div>
             <label htmlFor="last-name">Last Name</label>
             <input 
-              name="lastName" 
+              id="last-name"
+              name="last-name" 
               type="text"
               placeholder='Doe'
               value={formData.lastName}
@@ -92,6 +94,7 @@ const SignUpPage = () => {
 
       <label htmlFor="email">Email</label>
       <input 
+        id="email"
         name="email" 
         type="email"
         placeholder='JohnDoe@gmail.com'
@@ -102,6 +105,7 @@ const SignUpPage = () => {
 
       <label htmlFor="password">Password</label>
       <input  
+        id="password"
         name="password" 
         type="password"
         placeholder='Password'
@@ -112,6 +116,7 @@ const SignUpPage = () => {
 
       <label htmlFor="confirmPassword">Confirm password</label>
       <input 
+        id="confirmPassword"
         name="confirmPassword" 
         type="password"
         placeholder='Confirm password'
