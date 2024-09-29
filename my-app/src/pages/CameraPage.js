@@ -1,10 +1,10 @@
 // (Gaston) camera page
-import React from 'react'
-import CameraAccess from '../components/CameraAccess'
-import './CameraPageStyle.css'
+import React from 'react';
+import CameraAccess from '../components/CameraAccess';
+import './CameraPageStyle.css';
 import {FaBars, FaTimes} from "react-icons/fa";
-import cameraCircle from '../images/cameraCircle.svg'
-import addPhotoIcon from '../images/addPhotoIcon.svg'
+import cameraCircle from '../images/cameraCircle.svg';
+import addPhotoIcon from '../images/addPhotoIcon.svg';
 
 function CameraPage() {
   return (

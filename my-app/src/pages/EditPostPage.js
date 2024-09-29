@@ -1,7 +1,7 @@
 // (Gaston) edit posts page
-import React from 'react'
-import '../pages/EditPostPageStyle.css'
-import addPhotoIcon from "../images/addPhotoIcon.svg"
+import React from 'react';
+import '../pages/EditPostPageStyle.css';
+import addPhotoIcon from "../images/addPhotoIcon.svg";
 
 function EditPostPage() {
   return (
@@ -10,7 +10,7 @@ function EditPostPage() {
           <h1>Edit Post</h1>
       </div>
       <div className='post-photo'>
-        <a href='#'> <img className='add-photo-icon' src={addPhotoIcon} alt='add new photo'></img> </a>
+        <a href='#'> <img className='add-photo-icon' src={addPhotoIcon} alt='add new '></img> </a>
       </div>
       <div className='post-species'>
         <label htmlFor="species">Name of species</label>
@@ -25,7 +25,7 @@ function EditPostPage() {
         <input type="text" id="location" placeholder='Location'></input>
       </div>
       <div className='post-btn'>
-        <a href=''><button className='btn-discard'>Discard</button></a>
+        <a href='#'><button className='btn-discard'>Discard</button></a>
         <a href='profile'><button className='btn-post'>Post</button></a>
       </div>
     </div>

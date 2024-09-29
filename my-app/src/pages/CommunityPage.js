@@ -1,13 +1,12 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-
+import React from 'react';
+import Navbar from '../components/Navbar';
 import Card from 'react-bootstrap/Card';
 import kea from '../images/kea.jpg';
 import weka from '../images/weka.jpg';
 import spottedLizard from '../images/spottedLizard.jpg';
 import bookmarkIcon from '../images/bookmarkIcon.svg';
 import shareIcon from '../images/shareIcon.svg';
-import Footer from '../components/footer'
+import Footer from '../components/footer';
 
 function CommunityPage() {
   return (

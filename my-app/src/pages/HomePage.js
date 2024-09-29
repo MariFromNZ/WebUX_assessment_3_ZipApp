@@ -1,11 +1,11 @@
 /*(Gaston) creating home page*/
-import React from 'react'
+import React from 'react';
 import './HomePageStyle.css';
-import Navbar from '../components/Navbar'
-import Footer from '../components/footer'
-import hiwCamera from '../images/hiwCamera.svg'
-import hiwPeople from '../images/hiwPeople.svg'
-import hiwComment from '../images/hiwComment.svg'
+import Navbar from '../components/Navbar';
+import Footer from '../components/footer';
+import hiwCamera from '../images/hiwCamera.svg';
+import hiwPeople from '../images/hiwPeople.svg';
+import hiwComment from '../images/hiwComment.svg';
 
 /*Mariia added posts(cards)*/
 import Card from 'react-bootstrap/Card';
@@ -29,9 +29,9 @@ function HomePage() {
         <div className='hiw-section'>
             <h1>How it works</h1>
             <div className='hiw-icons'>
-                <img src={hiwCamera}/>
-                <img src={hiwPeople}/>
-                <img src={hiwComment}/>
+                <img src={hiwCamera} alt='camera flat icon'/>
+                <img src={hiwPeople} alt='people flat icon'/>
+                <img src={hiwComment} alt='comment flat icon'/>
             </div>
             <div className='hiw-numbering'>
                 <div className='' id='hiw-number'>

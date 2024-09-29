@@ -31,9 +31,8 @@ form h1 {
 
 form input {
     padding: 10px 5px;
-    background-color: none;
+    background-color:#fff;
     border-color: #afb1b6;
-    border-radius: none;
     border-style: solid;
 }
 
