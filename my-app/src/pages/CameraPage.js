@@ -8,7 +8,7 @@ import addPhotoIcon from '../images/addPhotoIcon.svg'
 
 function CameraPage() {
   return (
-    <body className='camera-page-background'>
+    <div className='camera-page-background'>
         <div className='camera-access'>
             <CameraAccess></CameraAccess>
         </div>
@@ -21,7 +21,7 @@ function CameraPage() {
         <div className='add-photo'>
             <img src={addPhotoIcon}/>    
         </div>
-    </body>
+    </div>
 
   )
 }

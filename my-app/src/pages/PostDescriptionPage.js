@@ -13,18 +13,17 @@ import profileIcon from '../images/userPhoto.png';
 import { MdModeEditOutline } from "react-icons/md";
 import AddComment from '../components/AddComment';
 import {FaTrash} from "react-icons/fa";
-
 import { getComments, addComments, deleteComments, updateComments } from '../APIClient/comments';
 
 function PostDescriptionPage() {
+
     const [input, setInput] = useState(""); 
     const [comments, setComments] = useState([]); // to store comments
     const [editIndex, setEditIndex] = useState(null); // index of comment being edited
     const [editInput, setEditInput] = useState(''); // store input for editing
 
-    // take comments from server
-    useEffect(() => {
-        getComments() 
+    useEffect(() => { 
+        getComments() // take comments from server
             .then(response => {
 
                 setComments(response.data); 
@@ -54,7 +53,6 @@ function PostDescriptionPage() {
     };
 
     const saveEditComment = (id, index) => {
-        // const updatedComment = { text: editInput }; 
         updateComments(id, editInput) // send edeted comment to server
             .then(response => {
                 const updatedComments = [...comments]; 

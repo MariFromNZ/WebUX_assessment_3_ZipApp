@@ -1,6 +1,6 @@
 // (Mariia) created Footer component with image that linking to uiatetaiao.nz, address and link to terms of use
 //-------------------------------------------------------------------------------------------------------------//
-// should change css for footer_content_address after adding bootstrap 
+
 import tuiTeTaiaoLogo from '../images/tuiTeTaiaoLogo.svg';
 import './footerStyle.css';
 

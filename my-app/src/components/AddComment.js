@@ -1,15 +1,11 @@
 // (Mariia) created add comment component 
 //-------------------------------------------------------------------------------------------------------------//
-
 import './AddCommentStyle.css';
 import profileIcon from '../images/userPhoto.png';
 import sendCommentIcon from '../images/sendCommentIcon.svg'
-
 import React from 'react';
 
 function AddComment({ input, setInput, addComment }) {
-
-
     return (
       <div>
         <div className='comment_box d-flex justify-content-between align-items-center'>
@@ -20,7 +16,6 @@ function AddComment({ input, setInput, addComment }) {
           <img  src={sendCommentIcon} alt="send comment icon"  onClick={addComment} /> 
         </div>
       </div>
-
     );
 }
 

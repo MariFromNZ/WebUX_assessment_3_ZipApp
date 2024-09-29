@@ -18,7 +18,6 @@ import { FaLocationDot } from "react-icons/fa6";
 import './ProfilePageStyle.css';
 import Card from 'react-bootstrap/Card';
 
-
 function ProfilePage() {
   return (
     <div>
@@ -39,7 +38,6 @@ function ProfilePage() {
                 <FaLocationDot />
                 <p>Ackland New Zealand</p>
                </div>
-
                 <p>5 followers</p>
                 <p>13 following</p>
              </Col>
@@ -50,7 +48,6 @@ function ProfilePage() {
                 <p>I’m an outdoor enthusiast who loves exploring nature and snapping photos of wildlife. Hiking, birdwatching, and capturing the beauty of plants and animals is my passion. </p>
               </Col>
            </Row>
-
            <Row className='profile_content_recent row-margin-bottom'>
               <h4>My recent posts</h4>
               <Col xs={6}>
@@ -65,7 +62,6 @@ function ProfilePage() {
                   </Card.Body>
                 </Card>
               </Col>
-
               <Col xs={6}>
                 <Card className='card-position'>
                   <Card.Img variant="top" src={weka} alt="bird weka"/>
@@ -78,7 +74,6 @@ function ProfilePage() {
                   </Card.Body>
                 </Card>
               </Col>
-
               <Col xs={6}>
                 <Card className='card-position'>
                   <Card.Img variant="top" src={kea} alt="user avatar" />
@@ -91,7 +86,6 @@ function ProfilePage() {
                   </Card.Body>
                 </Card>
               </Col>
-
               <Col xs={6}>
                 <Card className='card-position'>
                   <Card.Img variant="top" src={pukeko} alt="pukeko bird" />
@@ -105,7 +99,6 @@ function ProfilePage() {
                 </Card>
               </Col>
            </Row>
-
            <Row className='profile_content_saved row-margin-bottom'>
               <h4>My saved posts</h4>
 
